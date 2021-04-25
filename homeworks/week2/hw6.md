@@ -1,17 +1,42 @@
-``` js
+```js
 function isValid(arr) {
-  for(var i=0; i<arr.length; i++) {
-    if (arr[i] <= 0) return 'invalid'
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] <= 0) return "invalid";
   }
-  for(var i=2; i<arr.length; i++) {
-    if (arr[i] !== arr[i-1] + arr[i-2]) return 'invalid'
+  for (var i = 2; i < arr.length; i++) {
+    if (arr[i] !== arr[i - 1] + arr[i - 2]) return "invalid";
   }
-  return 'valid'
+  return "valid";
 }
 
-isValid([3, 5, 8, 13, 22, 35])
+isValid([3, 5, 8, 13, 22, 35]);
 ```
 
 ## 執行流程
-1. ..
-2. ..
+
+1. 執行第 11 行，呼叫函式 isValid(arr)，進入第 1 行，設定引數 arr 為 [3, 5, 8, 13, 22, 35]
+2. 執行第 2 行，設定變數 i 是 0，檢查 i 是否 < arr.length，是，繼續執行，開始進入第一圈迴圈
+3. 執行第 3 行，判斷 arr[0] 是否 <= 0，不是
+4. 第一圈迴圈結束，跑回第 2 行，i++，i 變成 1，檢查 i 是否 < arr.length，是，繼續執行
+5. 執行第 3 行，判斷 arr[1] 是否 <= 0，不是
+6. 第二圈迴圈結束，跑回第 2 行，i++，i 變成 2，檢查 i 是否 < arr.length，是，繼續執行
+7. 執行第 3 行，判斷 arr[2] 是否 <= 0，不是
+8. 第三圈迴圈結束，跑回第 2 行，i++，i 變成 3，檢查 i 是否 < arr.length，是，繼續執行
+9. 執行第 3 行，判斷 arr[3] 是否 <= 0，不是
+10. 第四圈迴圈結束，跑回第 2 行，i++，i 變成 4，檢查 i 是否 < arr.length，是，繼續執行
+11. 執行第 3 行，判斷 arr[4] 是否 <= 0，不是
+12. 第五圈迴圈結束，跑回第 2 行，i++，i 變成 5，檢查 i 是否 < arr.length，是，繼續執行
+13. 執行第 3 行，判斷 arr[5] 是否 <= 0，不是
+14. 第六圈迴圈結束，跑回第 2 行，i++，i 變成 6，檢查 i 是否 < arr.length，否，繼續往下
+15. 執行第 5 行，設定變數 i 是 2，檢查 i 是否 < arr.length，是，繼續執行，開始進入第一圈迴圈
+16. 執行第 6 行，判斷 arr[i] 是否不等於 arr[i-1] + arr[i-2]，不是
+17. 第一圈迴圈結束，跑回第 5 行，i++，i 變成 3，檢查 i 是否 < arr.length，是，繼續執行
+18. 執行第 6 行，判斷 arr[i] 是否不等於 arr[i-1] + arr[i-2]，不是
+19. 第二圈迴圈結束，跑回第 5 行，i++，i 變成 4，檢查 i 是否 < arr.length，是，繼續執行
+20. 執行第 6 行，判斷 arr[i] 是否不等於 arr[i-1] + arr[i-2]，是，回傳字串 invalid
+21. 執行完畢
+
+**猜測函式 isValid(arr) 的功能：**
+
+1. 判斷 arr 中的數字是否皆為正數，若是，則繼續往下執行
+2. 判斷 arr 是否為費氏數列，即 arr[n] 是否等於 arr[n-1] + arr[n-2] 相加結果
