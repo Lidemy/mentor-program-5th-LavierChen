@@ -12,4 +12,10 @@ function capitalize(str) {
     return result
 }
 
+// JavaScript 內建函式的解法：使用函式 toUpperCase()，就不用檢查第一個字母是不是大小寫，因為即使是大寫，轉換之後也還是大寫
+function capitalize_2(str) {
+    return str[0].toUpperCase() + str.slice(1);     
+}
+
 console.log(capitalize('hello'));
+console.log(capitalize_2('hello'));
