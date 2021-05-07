@@ -11,6 +11,17 @@
 
 利用**雙層迴圈**解題。
 
+〔另解〕利用**單層迴圈**解題
+
+```
+function solve(lines){
+    let n = Number(lines[0])
+    for (let i = 1; i <= n; i++){
+        console.log('*'.repeat(i))
+    }
+}
+```
+
 ## hw2：水仙花數
 
 #### 拆分問題

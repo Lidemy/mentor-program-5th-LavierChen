@@ -25,13 +25,3 @@ function solve(lines) {
         console.log(result)
     }
 }
-
-/*
-內建函式 repeat 解法
-function solve(lines) {
-    let n = Number(lines[0])
-    for (let i = 1; i <= n; i++){
-        console.log('*'.repeat(i))
-    }
-}
-*/

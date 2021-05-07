@@ -26,11 +26,3 @@ function solve(lines) {
 
     console.log(lines[0] === reverseString ? 'True' : 'False')
 }
-
-/*
-內建函式解法
-function solve(lines) {
-    let str = lines[0]
-    console.log(str.split('').reverse().join('') === str ? 'True' : 'False')
-}
-*/
