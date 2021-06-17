@@ -58,7 +58,7 @@ nav .list a:hover {
 
 /* banner */
 .banner {
-  background: url("./f-000.png") center/cover no-repeat;
+  background: url("asset/f-000.png") center/cover no-repeat;
   height: 580px;
   position: relative;
 }
