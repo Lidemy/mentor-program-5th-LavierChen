@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>新拖延運動報名表</title>
+        <link rel="stylesheet" href="./normalize.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <form class="form" action="">
+            <h1 id="form_title">新拖延運動報名表單</h1>
+            
+            <section class="form_content">
+                <p>活動日期：2020/12/10 ~ 2020/12/11</p>
+                <p>活動地點：台北市大安區新生南路二段1號</p>
+                <p class="content_alert">*必填</p>
+            </section>
+            
+            <section class="info_block">
+                <label for="name" class="form_item basic">暱稱</label>
+                <div class="require hide_error">
+                    <input type="text" name="name" id="name" placeholder="您的回答">
+                    <div class="error_text">請輸入暱稱</div>
+                </div>
+            </section>
+            
+            <section class="info_block">
+                <label for="e-mail" class="form_item basic">電子郵件</label>
+                <div class="require hide_error">
+                    <input type="text" name="e-mail" id="e-mail" placeholder="您的電子郵件">
+                    <div class="error_text">請輸入電子郵件</div>
+                </div>
+            </section>
+            
+            <section class="info_block">
+                <label for="phone" class="form_item basic">手機號碼</label>
+                <div class="require hide_error">
+                    <input type="text" name="phone" id="phone" placeholder="您的手機號碼">
+                    <div class="error_text">請輸入手機號碼</div>
+                </div>
+            </section>
+           
+            <section class="info_block">
+                <div class="form_item basic">報名類型</div>
+                <div class="choice require hide_error">
+                    <label>
+                        <input type="radio" name="plan" id="plan_1" value="imagination">躺在床上用想像力實作
+                    </label>
+                    <label>
+                        <input type="radio" name="plan" id="plan_2" value="playing on phone">趴在地上滑手機找現成的
+                    </label>
+                    <div class="error_text">請輸入報名類型</div>
+                </div>
+            </section>
+
+            <section class="info_block">
+                <label for="source" class="form_item basic">怎麼知道這個活動的？</label>
+                <div class="require hide_error">
+                    <input type="text" name="source" id="source" placeholder="您的回答">
+                    <div class="error_text">請輸入訊息來源</div>
+                </div>
+            </section>
+           
+            <section class="suggestion">
+                <div><label for="suggest" class="form_item">其他</label></div>
+                <p>對活動的一些建議</p>
+                <div><input type="text" name="suggest" id="suggest" placeholder="您的回答"></div>
+            </section>
+
+            <input type="submit" class="submit" value="提交">
+            <p>請勿透過表單送出您的密碼。</p>
+        </form>
+
+        <footer>
+            <p>© 2020 © Copyright. All rights Reserved.</p>
+        </footer>
+        
+        <script src="./main.js"></script>
+    </body>
+</html>
