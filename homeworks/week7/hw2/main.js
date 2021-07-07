@@ -1,6 +1,6 @@
 document.querySelector('.FAQ').addEventListener('click', (e) => {
-  const isValid = e.target.closest('.FAQ_block')
+  const isValid = e.target.closest('.FAQ_question')
   if (isValid) {
-    isValid.classList.toggle('hide_content')
+    isValid.parentNode.classList.toggle('hide_content')
   }
 })

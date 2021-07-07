@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 const form = document.querySelector('.form')
 form.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -35,7 +34,12 @@ form.addEventListener('submit', (e) => {
     }
   }
 
-  console.log(JSON.stringify(info))
+  const suggestion = document.querySelector('.suggestion')
+  const suggestionText = suggestion.querySelector('input[type="text"]')
+  if (suggestionText.value) {
+    info[suggestionText.name] = suggestionText.value
+  }
+
   if (!hasError) {
     alert(JSON.stringify(info))
   }
