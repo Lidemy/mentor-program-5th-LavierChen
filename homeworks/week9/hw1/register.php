@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <form class="board_new-comment-form" method="POST" action="handle_regiter.php">
+      <form class="board_new-comment-form" method="POST" action="handle_register.php">
         <div class="board_info">
           <span>暱稱：</span>
           <input type="text" name="nickname">
