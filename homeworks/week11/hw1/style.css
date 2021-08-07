@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #f7f7f7;
+  font-family: "Microsoft JhengHei", "Questrial", Sans-serif;
+}
+ul,
+li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+}
+.warning {
+  background: #ffc4c6;
+  color: #f1404b;
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bolder;
+}
+.board {
+  background: #ffffff;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px #ffffff;
+  border-radius: 5px;
+}
+.board.edit {
+  margin: 60px auto;
+}
+.board_header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  align-items: center;
+}
+.board_btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px 10px 10px 0;
+  background: #ffffff;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.board_btn:hover {
+  background-color: #252c41;
+  color: #ffffff;
+}
+.hidden {
+  display: none;
+}
+.board_new-comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.edit_textarea {
+  height: 400px;
+}
+.board_submit-btn {
+  width: 10%;
+  height: 40px;
+  background: #ffffff;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.board_submit-btn:hover {
+  background-color: #252c41;
+  color: #ffffff;
+}
+.error {
+  color: #f1404b;
+  margin: 10px 0;
+}
+.board_info {
+  margin: 10px 0;
+}
+.board_info input {
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  padding: 5px;
+}
+hr {
+  border: 0.5px solid #252c41;
+  margin: 20px auto;
+  max-width: 100%;
+}
+.card {
+  margin: 10px 0;
+  min-height: 80px;
+  padding: 10px 0;
+  display: flex;
+  border-bottom: 0.5px solid #dddfe6;
+}
+.card_avater {
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #dddfe6;
+  margin-right: 10px;
+}
+.card_author {
+  max-width: 400px;
+  color: #252c41;
+  font-size: 16px;
+  font-weight: bolder;
+  margin-right: 10px;
+}
+.card_time {
+  color: #cccccc;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.update_btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  margin-left: 10px;
+  background: #ffffff;
+  border: 2px solid #f1404b;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.update_btn:hover {
+  background-color: #f1404b;
+  color: #ffffff;
+}
+.card_content {
+  margin-top: 10px;
+  max-width: 100%;
+  white-space: pre-line;
+  word-break: break-word;
+  line-height: 2em;
+}
+.board_update-comment-form textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.page_info {
+  text-align: center;
+}
+.paginator {
+  display: flex;
+  justify-content: center;
+}
+.paginator a {
+  text-align: center;
+  text-decoration: none;
+  color: #252c41;
+  padding:5px;
+  margin:20px 5px;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.paginator a:hover {
+  background-color: #252c41;
+  color: #ffffff;
+}
+.backstage {
+  background: #ffffff;
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px #ffffff;
+  border-radius: 5px;
+}
+.authority_items {
+  display: flex;
+  width: 100%;
+  margin: 10px auto;
+  padding:10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color:#252c41;
+  border-bottom: 3px solid #252c41;
+}
+.authority_items li {
+  width:30%;
+  text-align: center;
+}
+.user_item {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 0.5px solid #dddfe6;
+  height:90px;
+}
+.user_item div {
+  width:30%;
+  text-align: center;
+  align-self: center;
+}
+.user_authority select {
+  height: 40px;
+  width: 80px;
+  font-size: 16px;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+}
+.save_btn {
+  border: 2px solid#f1404b;
+  border-radius: 5px;
+  align-self: center;
+  background: #ffffff;
+  height: 40px;
+  width: 60px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.save_btn:hover {
+  background-color: #f1404b;
+  color: #ffffff;
+}
