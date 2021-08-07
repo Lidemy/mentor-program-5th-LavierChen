@@ -38,6 +38,7 @@
       <!-- update post or create post --> 
       <?php if ($id) { ?>
         <form method="POST" action="handle_update_post.php">
+          <input type="hidden" name="id" value="<?php echo $id; ?>">
           <div class="edit_btn">
             <?php
               if (!empty($_GET['errCode'])) {
@@ -97,7 +98,7 @@
                 <label><input type="radio" name="category" value="others"><span class="category_btn">其他</span></label>
                 <?php break;
               default: ?>
-                <label><input type="radio" name="category" value="food" checked><span class="category_btn">食譜</span></label>
+                <label><input type="radio" name="category" value="food"><span class="category_btn">食譜</span></label>
                 <label><input type="radio" name="category" value="movie"><span class="category_btn">電影</span></label>
                 <label><input type="radio" name="category" value="feel"><span class="category_btn">心情</span></label>
                 <label><input type="radio" name="category" value="others" checked><span class="category_btn">其他</span></label>
@@ -111,7 +112,7 @@
         <div class="category_container">
           <span>Tag：</span>
           <div class="edit_category">
-            <?php switch (escape($post['category'])) {
+            <?php switch ($post['category']) {
               case 'food': ?>
                 <label><input type="radio" name="category" value="food" checked><span class="category_btn">食譜</span></label>
                 <label><input type="radio" name="category" value="movie"><span class="category_btn">電影</span></label>
@@ -131,7 +132,7 @@
                 <label><input type="radio" name="category" value="others"><span class="category_btn">其他</span></label>
                 <?php break;
               default: ?>
-                <label><input type="radio" name="category" value="food" checked><span class="category_btn">食譜</span></label>
+                <label><input type="radio" name="category" value="food"><span class="category_btn">食譜</span></label>
                 <label><input type="radio" name="category" value="movie"><span class="category_btn">電影</span></label>
                 <label><input type="radio" name="category" value="feel"><span class="category_btn">心情</span></label>
                 <label><input type="radio" name="category" value="others" checked><span class="category_btn">其他</span></label>
@@ -139,7 +140,7 @@
             } ?>
           </div>
         </div>
-        <textarea class="edit_content" name="content" rows="20" cols="80" placeholder="What's your story?" required><?php echo escape($post['content']) ?></textarea>
+        <textarea class="edit_content" name="content" placeholder="What's your story?" required><?php echo escape($post['content']) ?></textarea>
       <?php } ?>
     </div>
   </body>

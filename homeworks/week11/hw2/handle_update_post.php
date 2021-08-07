@@ -3,14 +3,16 @@
   require_once('conn.php');
   require_once('utils.php');
 
-  if (empty($_POST['title']) || empty($_POST['content'])) {
+  if (empty($_POST['id']) || empty($_POST['title']) || empty($_POST['content'])) {
     header('Location: edit_post.php?errCode=1&id=' . $_POST['id']);
     die('標題與內容不得為空');
   }
 
-  $id = (int)$_POST['id'];
+  $id = $_POST['id'];
   $username = $_SESSION['username'];
   $user = getUserFromUsername($username);
+  $title = $_POST['title'];
+  $category = $_POST['category'];
   $content = $_POST['content'];
   
   if ($username) {
@@ -24,5 +26,5 @@
     die($conn->error);
   }
 
-  header('Location: index.php');
+  header('Location: admin.php');
 ?>

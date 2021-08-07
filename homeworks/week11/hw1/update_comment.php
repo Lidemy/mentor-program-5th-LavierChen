@@ -22,9 +22,11 @@
   $result = $stmt->get_result();
   $row = $result->fetch_assoc();
 
-  if ($row['username'] !== $username) {
-    header('Location: index.php?errCode=5');
-    die('無權編輯他人留言');
+  if ($user['role'] !== 'admin') {
+    if ($row['username'] !== $username) {
+      header('Location: index.php?errCode=5');
+      die('無權編輯他人留言');
+    }
   }
 ?>
 
