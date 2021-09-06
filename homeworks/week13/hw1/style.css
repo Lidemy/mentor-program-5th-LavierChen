@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft JhengHei", "Questrial", Sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a, button {
+  text-decoration: none;
+  outline: none;
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a:hover, button:hover {
+  background-color: #252c41;
+  color: #ffffff;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+.warning {
+  background: #ffc4c6;
+  color: #f1404b;
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.board {
+  background: #ffffff;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px #dddfe6;
+  border-radius: 5px;
+}
+.board_header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  align-items: center;
+}
+.board_btn {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px 10px 10px 0;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.board_btn.update_nickname {
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.board_btn.update_nickname:hover {
+  background-color: #252c41;
+  color: #ffffff;
+}
+.board_new-comment-form textarea, .board_update-comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.board_new-comment-form .edit_textarea, .board_update-comment-form .edit_textarea {
+  height: 400px;
+}
+.board_submit-btn {
+  width: 10%;
+  height: 40px;
+  background: #ffffff;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.board_submit-btn:hover {
+  background-color: #252c41;
+  color: #ffffff;
+}
+.board_info {
+  margin: 10px 0;
+}
+.board_info input {
+  border: 2px solid #252c41;
+  border-radius: 5px;
+  padding: 5px;
+}
+.board .error {
+  color: #f1404b;
+  margin: 10px 0;
+}
+
+.board.edit {
+  margin: 60px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+hr {
+  border: 0.5px solid #252c41;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.card {
+  margin: 10px 0;
+  padding: 10px 0;
+  display: flex;
+  border-bottom: 0.5px solid #dddfe6;
+}
+.card_avater {
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #dddfe6;
+  margin-right: 10px;
+}
+.card_author {
+  max-width: 400px;
+  color: #252c41;
+  font-size: 16px;
+  font-weight: bolder;
+  margin-right: 10px;
+}
+.card_time {
+  color: #cccccc;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.card_info .update_btn {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 10px;
+  border: 2px solid #f1404b;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.card_info .update_btn:hover {
+  background-color: #f1404b;
+}
+.card_content {
+  margin-top: 10px;
+  max-width: 100%;
+  white-space: pre-line;
+  word-break: break-word;
+  line-height: 2em;
+}
+
+.page_info {
+  text-align: center;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+}
+.paginator a {
+  text-align: center;
+  padding: 5px;
+  margin: 20px 5px;
+  transition: all 0.3s;
+}
+
+.backstage {
+  background: #ffffff;
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px #dddfe6;
+  border-radius: 5px;
+}
+.backstage .authority_items {
+  display: flex;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #252c41;
+  border-bottom: 3px solid #252c41;
+}
+.backstage .authority_items li {
+  width: 30%;
+  text-align: center;
+}
+
+.user_item {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 0.5px solid #dddfe6;
+  height: 90px;
+}
+.user_item div {
+  width: 30%;
+  text-align: center;
+  align-self: center;
+}
+.user_item .save_btn {
+  height: 40px;
+  width: 60px;
+  align-self: center;
+  border: 2px solid #f1404b;
+  border-radius: 5px;
+  background: #ffffff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.user_item .save_btn:hover {
+  background-color: #f1404b;
+  color: #ffffff;
+}
+.user_authority select {
+  height: 40px;
+  width: 100px;
+  font-size: 16px;
+  border: 2px solid #252c41;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

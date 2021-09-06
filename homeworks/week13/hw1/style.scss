@@ -1,0 +1,248 @@
+@import './_reset.scss';
+@import './_variables.scss';
+
+body {
+  background: $background-color;
+}
+
+.warning {
+  background: $warning-bg-color;
+  color: $warning-color;
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.board {
+  background: $sub-color;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px $grey-light;
+  border-radius: 5px;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    align-items: center;
+  }
+
+  &_btn {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    font-size: $font-size-regular;
+    transition: all 0.3s;
+  }
+  
+  &_btn.update_nickname {
+    border: 2px solid $main-color;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:hover {
+      background-color: $main-color;
+      color: $sub-color;
+    }
+  }
+
+  &_new-comment-form, &_update-comment-form {
+    textarea  {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid $main-color;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .edit_textarea {
+      height: 400px;
+    }
+  }
+
+  &_submit-btn {
+    width: 10%;
+    height: 40px;
+    background: $sub-color;
+    border: 2px solid $main-color;
+    border-radius: 5px;
+    font-size: $font-size-regular;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+    &:hover {
+      background-color: $main-color;
+      color: $sub-color;
+    }
+  }
+
+  &_info {
+    margin: 10px 0;
+
+    input {
+      border: 2px solid $main-color;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+
+  .error {
+    color: $warning-color;
+    margin: 10px 0;
+  }
+
+}
+
+.board.edit {
+  margin: 60px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+hr {
+  border: 0.5px solid $main-color;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.card {
+  margin: 10px 0;
+  padding: 10px 0;
+  display: flex;
+  border-bottom: 0.5px solid $grey-light;
+
+  &_avater {
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $grey-light;
+    margin-right: 10px;
+  }
+
+  &_author {
+    max-width: 400px;
+    color: $main-color;
+    font-size: $font-size-regular;
+    font-weight: bolder;
+    margin-right: 10px;
+  }
+
+  &_time {
+    color: $grey-dark;
+    font-size: $font-size-small;
+    font-weight: bolder;
+  }
+
+  &_info {
+    .update_btn {
+      display: inline-block;
+      padding: 5px;
+      margin-left: 10px;
+      border: 2px solid $warning-color;
+      font-size: $font-size-small;
+      transition: all 0.3s;
+     
+      &:hover {
+        background-color: $warning-color;
+      }
+    }
+  }
+
+  &_content {
+    margin-top: 10px;
+    max-width: 100%;
+    white-space: pre-line;
+    word-break: break-word;
+    line-height: 2em;
+  }
+}
+
+.page_info {
+  text-align: center;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-align: center;
+    padding:5px;
+    margin:20px 5px;
+    transition: all 0.3s;
+  }
+}
+
+.backstage {
+  background: $sub-color;
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 30px;
+  box-shadow: 1px 1px 3px $grey-light; 
+  border-radius: 5px;
+
+  .authority_items {
+    display: flex;
+    width: 100%;
+    margin: 10px auto;
+    padding:10px 0;
+    font-size: $font-size-large;
+    font-weight: bold;
+    color:$main-color;
+    border-bottom: 3px solid $main-color;
+
+    li {
+      width:30%;
+      text-align: center;
+    }
+  }
+}
+
+.user {
+  &_item {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 0.5px solid $grey-light;
+    height:90px;
+
+    div {
+      width:30%;
+      text-align: center;
+      align-self: center;
+    }
+
+    .save_btn {
+      height: 40px;
+      width: 60px;
+      align-self: center;
+      border: 2px solid $warning-color;
+      border-radius: 5px;
+      background: $sub-color;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: $warning-color;
+        color: $sub-color;
+      }
+    }
+  }
+
+  &_authority {
+    select {
+      height: 40px;
+      width: 100px;
+      font-size: $font-size-regular;
+      border: 2px solid $main-color;
+      border-radius: 5px;
+    }
+  }
+}
